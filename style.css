@@ -102,6 +102,7 @@ input[type="button"], input[type="submit"], button, .button {
   font-weight: bold;
   border: 1px solid var(--color-dark);
   transition: all 0.2s;
+  cursor: pointer;
 }
 
 input[type="button"]:hover, input[type="submit"]:hover, button:hover, .button:hover {
