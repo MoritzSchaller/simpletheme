@@ -111,16 +111,23 @@ label {display: block;}
   margin: auto;
 }
 
-.adaptive-grid {
+.cols-2 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: minmax(0px, auto);
-  gap: 2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: minmax(0, auto);
 }
 
+.cols-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: minmax(0, auto);
+}
+
+.gap { gap: 2rem; }
+
 @media (max-width: 70rem) {
-  .adaptive-grid {
-    grid-template-columns: 1fr;
+  .cols-2.adaptive, .cols-3.adaptive {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
